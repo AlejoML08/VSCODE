@@ -1,0 +1,62 @@
+
+nav {
+    background-color: #1c4b3b;
+    padding: 10px;
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  a {
+    flex: 1;
+    color: #f7e6d4;
+    background-color: #1c4b3b;
+    border: 1px solid;
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s ease-out;
+  }
+  
+  a:hover,
+  a:focus {
+    background-color: #f7e6d4;
+    color: #1c4b3b;
+  }
+@keyframes circle-swoop {
+    from {
+      clip-path: var(--circle-top-right-out);
+    }
+    to {
+      clip-path: var(--circle-bottom-right-in);
+    }
+  }
+  
+  .--in-custom {
+    --transition__duration: 1s;
+    --transition__easing: ease-in-out;
+    animation-name: circle-swoop;
+  }
+
+  .wrapper {
+    perspective: 100px;
+    display: inline-flex;
+    gap: 1em;
+  }
+  .wrapper > div {
+    width: 7em;
+    line-height: 7em;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+    border: 3px dotted;
+  }
+  #box1:hover {
+    translate: 20px;
+  }
+  
+  #box2:hover {
+    translate: 20px 20px;
+  }
+  
+  #box3:hover {
+    translate: 5px 5px 30px;
+  }

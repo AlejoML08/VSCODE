@@ -1,0 +1,62 @@
+/* Estilos para la animación */
+body {
+  color:black ;
+  background-color: wheat;
+  transition: opacity 0.5s ease-in-out;
+}
+
+body.opacidad-0 {
+  opacity: 0;
+}
+
+body.opacidad-1 {
+  opacity: 1;
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  cursor: help;
+}
+
+.tooltip-content {
+  position: absolute;
+  top: -50%;
+  left: 1000%;
+  transform: translateX(-50%);
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: none;
+}
+
+.tooltip:hover .tooltip-content {
+  display: block;
+}
+
+.tooltip-content::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #ccc transparent;
+}
+
+.tooltip-content img {
+  width: 250px;
+  height: 150px;
+  margin: 10px;
+}
+
+.tooltip-content p {
+  font-size: 12px;
+  color: #666;
+  margin: 10px;
+}

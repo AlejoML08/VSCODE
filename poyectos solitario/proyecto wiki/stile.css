@@ -1,0 +1,208 @@
+body {
+  background-image: url(imagenes/Koenigsegg-Logo\ \(1\).png);
+  background-color: rgb(253, 247, 235);
+  color: #65665b;
+  font-size: 2,3em;
+  transition: opacity 0.5s ease-in-out;
+}
+
+body.desvanecer :hover {
+  opacity: 0;
+}
+
+body.aparecer  :hover{
+  opacity: 1;
+}
+
+img{
+  height: 150px;
+  width: 400;
+}
+
+/* Scroll */
+#scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #65665b;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#scroll-to-top:hover {
+  background-color: #444;
+}
+
+/* barra de navegacion y logo */
+.header {
+  display: block;
+  width: auto;
+  height: 150px;
+  background-color: #65665b;
+  border-radius: 5px;
+  padding: 0.5%;
+}
+
+.nav {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav li {
+  position: relative;
+}
+
+.nav a {
+  white-space: nowrap;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav li :hover a {
+  color: black;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-link:hover:before {
+  visibility: visible;
+  width: 100%;
+}
+
+.img-nav {
+  padding: 0%;
+  height: 150px;
+  width: 250px;
+  margin-left: 50%;
+}
+/* tooltip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  cursor: help;
+}
+
+.tooltip-content {
+  position: absolute;
+  top: -150px;
+  left: 350px;
+  transform: translateX(-50%);
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: none;
+}
+
+.tooltip:hover .tooltip-content {
+  display: block;
+}
+
+.tooltip-content::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #ccc transparent;
+}
+
+.tooltip-content img {
+  border-radius: 5px;
+  width: 250px;
+  height: 150px;
+  margin: 10px;
+}
+
+.tooltip-content p {
+  font-size: 12px;
+  color: #666;
+  margin: 10px;
+}
+/* pie de pagina */
+footer {
+  background-color: #65665b;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .col-md-4 {
+  flex-basis: 33.33%;
+  margin-bottom: 20px;
+}
+
+footer h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer li {
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ccc;
+}
+
+.copyright {
+  background-color: #444;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  clear: both;
+}
